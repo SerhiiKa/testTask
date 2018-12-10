@@ -10,7 +10,6 @@
  * Domain Path:       /languages
  */
 
-
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Access denied.' );
@@ -24,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function cnt_requirements_met() {
 	require_once( ABSPATH . '/wp-admin/includes/plugin.php' ) ;
 
-	if ( ! is_plugin_active( 'cn_php_wp_plugin_for_tasks/coding-ninjas.php' ) ) {
+	if ( ! is_plugin_active( 'coding-ninjas/coding-ninjas.php' ) ) {
 		return false;
 	}
 
