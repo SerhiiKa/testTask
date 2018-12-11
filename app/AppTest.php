@@ -78,7 +78,7 @@ class AppTest extends codingninjas\App {
 		$folders = [
 			'decorators',
 			'metabox',
-			'utilities'
+			'shortcodes'
 		];
 
 		$parts = explode( '\\', $class );
@@ -123,6 +123,13 @@ class AppTest extends codingninjas\App {
 		}
 		add_action( 'wp_ajax_add_task', array( $this, 'addItemToTask' ) );
 		add_action( 'wp_ajax_nopriv_add_task', array( $this, 'addItemToTask' ) );
+
+		/*
+		  shortcode handler
+		  possibly to pass a parameter(ms) that determines how often the shortcode will be updated
+		  default 5000ms
+		 */
+		ShortcodeDashboard::run();
 	}
 
 	/**
