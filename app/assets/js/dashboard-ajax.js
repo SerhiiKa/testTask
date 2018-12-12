@@ -2,6 +2,7 @@
 	$(document).ready(function ($) {
 		console.log('dashboard');
 		let ajax = null;
+
 		function callAjax () {
 			if (ajax != null) {
 				ajax.abort();
@@ -37,6 +38,10 @@
 			});
 
 		}
-		setTimeout(callAjax, ajaxDashboardData.timeout_ajax);
+
+		if ($('#number_freelancer').length && $('#number_tasks').length) {
+			setTimeout(callAjax, ajaxDashboardData.timeout_ajax);
+		}
+
 	});
 })(jQuery);
